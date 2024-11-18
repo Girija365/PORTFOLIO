@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Shelter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            /* padding: 40px;
+            text-align: center; */
+            background-color: #f2f2f2;
+            background-image: linear-gradient(135deg, #efacf0 30%, #d7e785 100%);
+            background-repeat: no-repeat;
+            border: 3px solid black;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            max-width: 400px;
+            /* margin: 5 auto;
+            padding: 20px; */
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"],
+        input[type="number"] {
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .logo {
+        width: 50px;
+        height: 50px;
+        flex: 0 0 auto;
+        overflow: visible;
+        height: 50px;
+        width: 70px;
+        padding-right: 33%;
+      }
+      
+      .logo img {
+        height: 50px;
+        width: 100px;
+        /* border: 1PX SOLID black; */
+      }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      padding: 10;
+      margin: 2%;
+      border: solid black;
+      background-color: rgb(148, 237, 237);
+      background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+
+    }
+    .donate-button,
+    .login-button,
+    .signup-button {
+      margin-left: 10px;
+      padding: 10px 20px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      flex: 15%;
+    }
+
+    .donate-button:hover,
+    .login-button:hover,
+    .signup-button:hover {
+      background-color: #555;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/LogoGreenNOBG.png" alt="Volunteer matching logo">
+        </div>
+        <button class="login-button" onclick="location.href='http://localhost/FC58/searchvol.php'"> Volunteers</button>
+        <button class="login-button" onclick="location.href='http://localhost/FC58/searchOppo.php'">Opportunity</button>
+        <button class="donate-button">Donate</button>
+        <!-- <button  class="donate-button" onclick="location.href='addshelter.html'">Shelter</button> -->
+        <button  class="donate-button" onclick="location.href='home.html'">Home</button>
+        <button  class="donate-button" onclick="location.href='alert.html'">Alert</button>
+        <button  class="donate-button" onclick="location.href='contactus.html'">Contact Us</button>
+    <button class="login-button" onclick="location.href='login.html'">Logout</button>
+    <!-- <button class="signup-button" onclick="location.href='signup.html' ">Sign Up</button> -->
+    </header>
+    <h1>Add Shelter</h1>
+    <form action="insertshelter.php" method="POST">
+        <label for="location">Location:</label>
+        <input type="text" name="location" id="location" required>
+        <br>
+        <label for="phone">Phone:</label>
+        <input type="text" name="phone" id="phone" required>
+        <br>
+        <label for="availability">Availability:</label>
+        <input type="number" name="availability" id="availability" required>
+        <br>
+        <input type="submit" value="Add Shelter">
+    </form>
+
+    <br>
+    <br>
+    <h1><i>OR</i></h1>
+    <br>
+    <h3> <a href="shelterlist.php"> Click here to search shelter availability in your area</a></h3>
+</body>
+</html>
